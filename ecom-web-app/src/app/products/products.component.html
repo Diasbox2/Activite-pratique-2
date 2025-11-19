@@ -1,0 +1,27 @@
+<div class="container mt-3">
+  <h2>Products List</h2>
+
+  <div *ngIf="!products" class="alert alert-info">
+    Loading products... (If this takes too long, check Console F12)
+  </div>
+
+  <table class="table table-striped" *ngIf="products && products._embedded">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let p of products._embedded.products">
+      <td>{{p.id}}</td>
+      <td>{{p.name}}</td>
+      <td>{{p.price}}</td>
+      <td>{{p.quantity}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
