@@ -8,10 +8,23 @@
     <artifactId>ecom-ii-bdcc-app</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <packaging>pom</packaging>
+
     <properties>
         <maven.compiler.source>23</maven.compiler.source>
         <maven.compiler.target>23</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <modules>
+        <module>billing-service</module>
+        <module>config-service</module>
+        <module>customer-service</module>
+        <module>discovery-service</module>
+        <module>gatewayy-service</module>
+        <module>inventoryy-service</module>
+        <module>emsi-chat</module>
+        <module>emsi-chat/mcp-server</module>
+    </modules>
 
 </project>

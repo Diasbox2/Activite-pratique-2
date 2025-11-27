@@ -18,7 +18,7 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit() {
     // This URL goes to the Gateway (8888), which forwards to Inventory Service
-    this.http.get("http://localhost:8888/inventoryy-service/products").subscribe({
+    this.http.get("http://localhost:8888/inventoryy-service/api/products").subscribe({
       next: (data) => {
         console.log("SUCCESS: Data received from Backend:", data); // Check your console for this!
         this.products = data;

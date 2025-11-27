@@ -1,0 +1,25 @@
+<div class="container mt-3">
+  <h2>Products List</h2>
+
+  <div *ngIf="!customers" class="alert alert-info">
+    Loading products... (If this takes too long, check Console F12)
+  </div>
+
+  <table class="table table-striped" *ngIf="customers && customers._embedded">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let p of customers._embedded.customers">
+      <td>{{p.id}}</td>
+      <td>{{p.name}}</td>
+      <td>{{p.email}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
